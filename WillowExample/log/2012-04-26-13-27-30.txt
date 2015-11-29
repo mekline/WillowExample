@@ -1,0 +1,163 @@
+run	-1	'Willow is running on port 6999'
+log	0	u"('willowSubNo', 'Paycode', 'VideoComment', 'sentCond', 'changeCond', 'isChange', 'trialNo', 'itemNo', 'Verb', 'OrigVid', 'NewVid', 'Response', 'Error', 'Correct')"
+take	0	"{'tag': 'click', 'id': 'ConsentButton', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<h3>Consent Statement</h3>\n<p class="blocktext"> By answering the following questions, you are participating in a study being performed by cognitive scientists in the MIT Department of Brain and Cognitive Science. \nIf you have questions about this research, please contact Melissa Kline at mitplaylab@gmail.com. Your participation in this research is voluntary. You may decline to \nanswer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; \nthe researchers who have requested your participation will not receive any personal information about you.</p>\n\n<p class="blocktext"><b> This is a DINOSAUR MOUNTAIN SURVEY.  Please complete only one HIT from this group.  You will not be paid for completing more than one DINOSAUR MOUNTAIN survey, including those taken from previous HIT groups.</b> </p>\n\n<p class="blocktext"> Click the \'I agree\' button below to go on to the study</p>\n\n<p class="blocktext">\n<input type=\'submit\' value=\'I agree\' id=\'ConsentButton\'>\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461257347L, 'tag': 'click', 'id': 'ConsentButton', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'ConsentButton', 'time': 1335461257347L}"
+take	0	"{'tag': 'click', 'id': 'ReqButton', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<h3>System Requirements</h3>\n\n<p class="blocktext">This experiment requires a browser that can display videos.  Common modern browsers including the current versions of Firefox, Safari, and Chrome should all work well. Internet Explorer is also acceptable. <p/>\n\n<p class="blocktext"> The task also requires the ability to hear sound through your earphones (preferred) or computer speakers. Please make sure your sound is turned on and that any music or other distracting sounds are turned off.</p>\n\n<p class="blocktext"> Next you will watch a test video to make sure your system will display them correctly.  When you are ready, click the button below to watch the test video.  You will be asked to write a short description of what you see and hear. </p>\n\n<p class="blocktext">\n<input type=\'submit\' value=\'Play test video\' id=\'ReqButton\'>\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461258272L, 'tag': 'click', 'id': 'ReqButton', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'ReqButton', 'time': 1335461258272L}"
+let	0	'(body)'
+let	0	'(body)'
+take	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<video id="TheMovie" width="600" height="450" preload autoplay>\n  \n  <source id="src_mpg" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/GiveBalloon/GiveBalloon.mp4"  type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n  <source id="src_webm" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/GiveBalloon/GiveBalloon.webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n  <source id="src_ogv" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/GiveBalloon/GiveBalloon.theora.ogv"  type=\'video/ogg; codecs="theora, vorbis"\'>\n  \n\t<object\n\tclassid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"\n\tcodebase="http://www.apple.com/qtactivex/qtplugin.cab"\n\theight="400"\n\twidth="300" >\n\t<param id="src_obj" name="src" value="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/GiveBalloon/GiveBalloon.mp4"/>\n\t<param name="scale" value="aspect" />\n\t<param name="controller" value="false" />\n\t<param name="autoplay" value="true" />\n\t<embed\n\tid="src_embed"\n\ttype="video/quicktime"\n\tpluginspage="http://www.apple.com/quicktime/download/"\n\theight="450"\n\twidth="600"\n\tsrc="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/GiveBalloon/GiveBalloon.mp4"\n\tscale="aspect"\n\tcontroller="false"\n\tautoplay="true" />\n\t</object>\n</video>\n</div>\n\n</body>\n</html>\n'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'click', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Did you see and hear the video?</p>\n\n<p class="blocktext">\n<input type="submit" class="choice" name="VidCheck" id=\'Yes\' value=\'Yes\' /> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\n<input type="submit" class="choice" name="VidCheck" id=\'No\' value=\'No\' />\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461290266L, 'tag': 'click', 'id': 'Yes', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'Yes', 'time': 1335461290266L}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Please write a short description of what you saw and heard.</p>\n\n<p class="blocktext">\n<textarea name="MovieDescrip" rows="3" cols="50" id="MovieDescrip" value=""></textarea>\n</p>\n\n\n<p class="blocktext">\n<input type=\'submit\' value=\'Click to continue\' id=\'GoButton\'>\n</p>\n\n</body>\n</html>'
+take	0	"{'tag': 'click', 'id': 'GoButton', 'client': 0}"
+put	0	"{'time': 1335461292897L, 'tag': 'click', 'id': 'GoButton', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'GoButton', 'time': 1335461292897L}"
+take	0	"{'ticket': 1, 'tag': 'peek'}"
+peek	0	'(#MovieDescrip)'
+put	0	"{'ticket': 1, 'tag': 'peek', 'time': 1335461292920L, 'value': '', 'client': 0}"
+took	0	"{'ticket': 1, 'tag': 'peek', 'client': 0, 'value': '', 'time': 1335461292920L}"
+take	0	"{'tag': 'click', 'id': 'InstructButton', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n\n<h3> Instructions</h3>\n<h3> Part 1 </h3>\n<p class="blocktext"> You will now see a series of 18 short movies and answer memory questions about them.  Each time, you will see a video of an event, and then be given a short distracting task (solving simple math problems.)  \nThen you will see another movie of a similar event.  Some of the videos will be exactly the same as the first movie, and some will have changed slightly.  Your task is to decide for each whether it was exactly the same as the first \nmovie you saw (\'Same\'), or was different in some way (\'Different\'). </p>\n\n<p class="blocktext"> The movies are very short, and the presentations are timed.  Do not click away from this tab during the experiment.  If you are looking away, or if a movie doesn\'t display correctly, click the "I missed it" button.</p>\n\n<p class="blocktext"> At the end of the test movie you just watched, you should have seen a plus sign on a black background, like this:</p>\n\n<div>\n<img src="fixationcross.jpg" height=150 width=200>\n</div>\n\n<p class="blocktext"> You should see this symbol at the end of every movie at least for a moment - this lets you know that your browser is playing all the way to the end of the movie.  If you do NOT see this symbol at the end of a movie, please click the "I missed it" button. </p>\n\n<p class="blocktext"><i> This is a DINOSAUR MOUNTAIN SURVEY.  Please complete only one HIT from this group.  You will not be paid for completing more than one DINOSAUR MOUNTAIN survey (including surveys taken in previous HIT groups.)</i> </p>\n\n<p class="blocktext"> Click the button below when you are ready to start watching the videos.</p>\n\n<p class="blocktext">\n<input type=\'submit\' value=\'Ready to start!\' id=\'InstructButton\'>\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461298932L, 'tag': 'click', 'id': 'InstructButton', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'InstructButton', 'time': 1335461298932L}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Get ready to watch the next video</p>\n\n<h3> She changed the lights </h3>\n\n</body>\n</html>\n'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<video id="TheMovie" width="600" height="450" preload autoplay>\n  \n  <source id="src_mpg" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"  type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n  <source id="src_webm" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n  <source id="src_ogv" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.theora.ogv"  type=\'video/ogg; codecs="theora, vorbis"\'>\n  \n\t<object\n\tclassid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"\n\tcodebase="http://www.apple.com/qtactivex/qtplugin.cab"\n\theight="400"\n\twidth="300" >\n\t<param id="src_obj" name="src" value="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"/>\n\t<param name="scale" value="aspect" />\n\t<param name="controller" value="false" />\n\t<param name="autoplay" value="true" />\n\t<embed\n\tid="src_embed"\n\ttype="video/quicktime"\n\tpluginspage="http://www.apple.com/quicktime/download/"\n\theight="450"\n\twidth="600"\n\tsrc="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"\n\tscale="aspect"\n\tcontroller="false"\n\tautoplay="true" />\n\t</object>\n</video>\n</div>\n\n</body>\n</html>\n'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> <font color="white">.</font color></p>\n\n<h3> She changed the lights </h3>\n\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext">Solve as many of these math problems as you can in the next 5 seconds.</p>\n\n<p class="blocktext"> 1 + 2 = <textarea id="math1" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 0 + 4 = <textarea id="math2" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 9 + 9 = <textarea id="math3" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 5 + 3 = <textarea id="math4" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 6 + 5 = <textarea id="math5" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 8 + 8 = <textarea id="math6" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 7 + 6 = <textarea id="math7" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 2 + 1 = <textarea id="math8" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 4 + 7 = <textarea id="math9" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 3 + 0 = <textarea id="math10" rows="1" cols="20"> </textarea> </p>\n\n</body>\n</html>'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<video id="TheMovie" width="600" height="450" preload autoplay>\n  \n  <source id="src_mpg" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"  type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n  <source id="src_webm" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n  <source id="src_ogv" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.theora.ogv"  type=\'video/ogg; codecs="theora, vorbis"\'>\n  \n\t<object\n\tclassid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"\n\tcodebase="http://www.apple.com/qtactivex/qtplugin.cab"\n\theight="400"\n\twidth="300" >\n\t<param id="src_obj" name="src" value="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"/>\n\t<param name="scale" value="aspect" />\n\t<param name="controller" value="false" />\n\t<param name="autoplay" value="true" />\n\t<embed\n\tid="src_embed"\n\ttype="video/quicktime"\n\tpluginspage="http://www.apple.com/quicktime/download/"\n\theight="450"\n\twidth="600"\n\tsrc="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/Change/Change_Lamp.mp4"\n\tscale="aspect"\n\tcontroller="false"\n\tautoplay="true" />\n\t</object>\n</video>\n</div>\n\n</body>\n</html>\n'
+put	0	"{'tag': 'key', 'time': 1335461320305L, 'value': '8', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'click', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<img src="black.jpg" width="600" height="450">\n</div>\n\n</body>\n</html>\n'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Were the two movies you saw (exactly) the same or different?</p>\n\n<p class="blocktext">\n<input class="choice" id=\'Same\' value=\'   Same   \' type=\'submit\' />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\n<input class="choice" id=\'Different\' value=\'Different\' type=\'submit\' />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\n<input class="choice" id=\'Error\' value=\'I missed it!\' type=\'submit\' />\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461494646L, 'tag': 'click', 'id': 'Same', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'Same', 'time': 1335461494646L}"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> <font color="white">.</font color></p>\n\n<h3> Correct! </h3>\n\n<div>\n<img src="images.jpg">\n</div>\n\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<br></br>\n\n<p class="blocktext">\n</p>\n\n<div class="meter-wrap">\n    <div class="meter-value" style="background-color: #0a0; width: 5%;">\n        <div class="meter-text">\n            You have finished 1 out of 18 questions!\n        </div>\n    </div>\n</div>\n\n\n\n\n</body>\n<html>'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+log	0	u"(0, '15985480b0', '', 'transitive', 'change1', 0, 0, '3', 'Change', 'Change/Change_Lamp', 'Change/Change_Lamp', 'Same', 'None', 1)"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Get ready to watch the next video</p>\n\n<h3> He turned off the television </h3>\n\n</body>\n</html>\n'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<video id="TheMovie" width="600" height="450" preload autoplay>\n  \n  <source id="src_mpg" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_TV.mp4"  type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n  <source id="src_webm" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_TV.webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n  <source id="src_ogv" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_TV.theora.ogv"  type=\'video/ogg; codecs="theora, vorbis"\'>\n  \n\t<object\n\tclassid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"\n\tcodebase="http://www.apple.com/qtactivex/qtplugin.cab"\n\theight="400"\n\twidth="300" >\n\t<param id="src_obj" name="src" value="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_TV.mp4"/>\n\t<param name="scale" value="aspect" />\n\t<param name="controller" value="false" />\n\t<param name="autoplay" value="true" />\n\t<embed\n\tid="src_embed"\n\ttype="video/quicktime"\n\tpluginspage="http://www.apple.com/quicktime/download/"\n\theight="450"\n\twidth="600"\n\tsrc="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_TV.mp4"\n\tscale="aspect"\n\tcontroller="false"\n\tautoplay="true" />\n\t</object>\n</video>\n</div>\n\n</body>\n</html>\n'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> <font color="white">.</font color></p>\n\n<h3> He turned off the television </h3>\n\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext">Solve as many of these math problems as you can in the next 5 seconds.</p>\n\n<p class="blocktext"> 9 + 4 = <textarea id="math1" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 3 + 2 = <textarea id="math2" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 2 + 8 = <textarea id="math3" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 6 + 6 = <textarea id="math4" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 0 + 7 = <textarea id="math5" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 4 + 3 = <textarea id="math6" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 5 + 9 = <textarea id="math7" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 7 + 5 = <textarea id="math8" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 1 + 1 = <textarea id="math9" rows="1" cols="20"> </textarea> </p>\n<p class="blocktext"> 8 + 0 = <textarea id="math10" rows="1" cols="20"> </textarea> </p>\n\n</body>\n</html>'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<video id="TheMovie" width="600" height="450" preload autoplay>\n  \n  <source id="src_mpg" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_Balloon.mp4"  type=\'video/mp4; codecs="avc1.42E01E, mp4a.40.2"\'>\n  <source id="src_webm" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_Balloon.webm" type=\'video/webm; codecs="vp8, vorbis"\'>\n  <source id="src_ogv" src="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_Balloon.theora.ogv"  type=\'video/ogg; codecs="theora, vorbis"\'>\n  \n\t<object\n\tclassid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"\n\tcodebase="http://www.apple.com/qtactivex/qtplugin.cab"\n\theight="400"\n\twidth="300" >\n\t<param id="src_obj" name="src" value="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_Balloon.mp4"/>\n\t<param name="scale" value="aspect" />\n\t<param name="controller" value="false" />\n\t<param name="autoplay" value="true" />\n\t<embed\n\tid="src_embed"\n\ttype="video/quicktime"\n\tpluginspage="http://www.apple.com/quicktime/download/"\n\theight="450"\n\twidth="600"\n\tsrc="http://www.mit.edu/~mekline/Resources/WillowExample/Movies/TurnOff/TurnOff_Balloon.mp4"\n\tscale="aspect"\n\tcontroller="false"\n\tautoplay="true" />\n\t</object>\n</video>\n</div>\n\n</body>\n</html>\n'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'click', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<div>\n<img src="black.jpg" width="600" height="450">\n</div>\n\n</body>\n</html>\n'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Were the two movies you saw (exactly) the same or different?</p>\n\n<p class="blocktext">\n<input class="choice" id=\'Same\' value=\'   Same   \' type=\'submit\' />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\n<input class="choice" id=\'Different\' value=\'Different\' type=\'submit\' />&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;\n<input class="choice" id=\'Error\' value=\'I missed it!\' type=\'submit\' />\n</p>\n\n</body>\n</html>'
+put	0	"{'time': 1335461526988L, 'tag': 'click', 'id': 'Different', 'client': 0}"
+took	0	"{'client': 0, 'tag': 'click', 'id': 'Different', 'time': 1335461526988L}"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+take	0	"{'tag': 'PING', 'client': 0}"
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> <font color="white">.</font color></p>\n\n<h3> Correct! </h3>\n\n<div>\n<img src="images.jpg">\n</div>\n\n</body>\n</html>'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<br></br>\n\n<p class="blocktext">\n</p>\n\n<div class="meter-wrap">\n    <div class="meter-value" style="background-color: #0a0; width: 11%;">\n        <div class="meter-text">\n            You have finished 2 out of 18 questions!\n        </div>\n    </div>\n</div>\n\n\n\n\n</body>\n<html>'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+log	0	u"(0, '15985480b0', '', 'transitive', 'change1', 1, 1, '6', 'TurnOff', 'TurnOff/TurnOff_TV', 'TurnOff/TurnOff_Balloon', 'Different', 'None', 1)"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n\n<p class="blocktext"> Get ready to watch the next video</p>\n\n<h3> She popped the balloon </h3>\n\n</body>\n</html>\n'
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+let	0	'(body)'
+add	0	'(body)\n<html>\n<head>\n<link rel="stylesheet" type="text/css" href="exp.css" />\n</head>\n<body>\n</body>\n</html>'
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
+put	0	"{'tag': 'PING', 'client': 0}"
+took	0	"{'tag': 'PING', 'client': 0}"
+take	0	"{'tag': 'PING', 'client': 0}"
